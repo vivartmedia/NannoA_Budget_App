@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./src/output.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+
+  </head>
+
+  <body class="bg-cyan-900 text-slate-200 w-full">
+    <div class="container mx-auto flex flex-col items-center w-full">
+      <div class="my-4">
+        <h1 class="text-4xl font-bold underline">Budget Manager</h1>
+      </div>
+      <div class="mb-6">
+        <h1 id="remainingBudget" class="text-7xl font-thin my-4">000.00</h1>
+        <hr>
+      </div>
+      <div>
+        <button id="updateBudget" type="button"
+            class="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-3xl px-5 py-2.5 text-center mb-8 w-72">Update Budget</button>
+        
+        
+
+
+      </div>
+
+      <div>
+        <button id="addExpense" type="button"
+            class="text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-3xl px-5 py-2.5 text-center w-72 mb-8">Add Expense</button>
+            <hr>
+      </div>
+<!-- ------------------------------------------------------ -->
+      <div id="calculations" class="w-full  mt-4">
+
+      </div>
+
+
+    <div class="flex justify-between w-full px-14 my-5 text-xl">
+        <div>
+            <h1>Budget:</h1>
+        </div>
+        <div id="originalBudget">
+            <h1>0</h1>
+        </div>
+    </div>
+      
+
+    </div>
+    <script type="module" src="./scripts/app2.js"></script>
+  </body>
+</html>
