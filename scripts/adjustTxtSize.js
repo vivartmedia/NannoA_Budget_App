@@ -8,12 +8,12 @@ export function adjustTextSizeForBudget() {
     budgetElement.classList.remove('text-xs', 'text-sm', 'text-base', 'text-lg', 'text-xl', 'text-2xl', 'text-3xl', 'text-4xl', 'text-5xl', 'text-6xl', 'text-7xl');
 
     // Determine and apply new text size class based on content length or screen width
-    if (budgetValue.length > 11) {
+    if (budgetValue.length > 19) {
+        budgetElement.classList.add('text-3xl');
+    } else if (budgetValue.length > 11) {
         budgetElement.classList.add('text-4xl');
     } else if (budgetValue.length > 8) {
         budgetElement.classList.add('text-6xl');
-    } else if (budgetValue.length < 8) {
-        budgetElement.classList.add('text-7xl');
     } else {
         budgetElement.classList.add('text-xl'); // Default for smaller content lengths
     }
