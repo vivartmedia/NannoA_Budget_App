@@ -2,11 +2,19 @@ const translations = {
     en: {
         budgetManager: "Budget Manager",
         updateBudget: "Update Budget",
+        addExpense: "Add Expenses",
+        enterTotalBudget: "Please enter your total budget:",
+        invalidNumber: "Please enter a valid number.",
+        
+
         // Add more keys and values as needed
     },
     es: {
         budgetManager: "Gerente de Presupuesto",
         updateBudget: "actualizar presupuesto",
+        addExpense: "Agregar gastos",
+        enterTotalBudget: "Por favor, introduzca su presupuesto total:",
+        invalidNumber: "Por favor, introduzca un número válido.",
         // Add more keys and values as needed
     },
     // Add more languages as needed
