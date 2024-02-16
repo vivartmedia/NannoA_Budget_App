@@ -10,7 +10,7 @@ export function adjustTextSizeForBudget() {
     // Determine and apply new text size class based on content length or screen width
     if (budgetValue.length > 11) {
         budgetElement.classList.add('text-4xl');
-    } else if (budgetValue.length > 8) {
+    } else if (budgetValue.length > 9) {
         budgetElement.classList.add('text-6xl');
     } else if (budgetValue.length < 8) {
         budgetElement.classList.add('text-7xl');
