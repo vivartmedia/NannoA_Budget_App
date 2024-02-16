@@ -1,7 +1,7 @@
 // Import the function to update the expense list from another module.
 import { updateExpenseList } from './expenseList.js';
 import { adjustTextSizeForBudget, formatNumber } from './adjustTxtSize.js';
-import { applyTranslations } from './translate.js';
+import { applyTranslations, getTranslationKeys } from './translate.js';
 
 // Once the DOM is fully loaded, execute the following code.
 document.addEventListener('DOMContentLoaded', () => {
@@ -52,7 +52,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Event listeners for updating the budget and adding expenses, including input validation.
     document.getElementById('updateBudget').addEventListener('click', () => {
-        const userInput = prompt("Please enter your total budget:");
+        const keys = getTranslationKeys(); 
+
+        const userInput = prompt(keys.enterTotalBudget);
         const budget = parseFloat(userInput);
         if (!isNaN(budget) && budget >= 0) {
             originalBudget = budget;
@@ -60,20 +62,24 @@ document.addEventListener('DOMContentLoaded', () => {
             updateBudgetDisplay();
             updateAndSaveExpenses();
         } else {
-            alert("Please enter a valid number.");
+            alert(keys.invalidNumber);
         }
     });
 
     document.getElementById('addExpense').addEventListener('click', () => {
-        const expenseName = prompt("What is the expense for?");
-        const expenseAmountInput = prompt("How much is the expense?");
+        const keys = getTranslationKeys(); // Retrieve the appropriate translations
+
+        const expenseName = prompt(keys.enterExpenseName); // Use the translated string
+        const expenseAmountInput = prompt(keys.enterExpenseAmount); // Use the translated string
         const expenseAmount = parseFloat(expenseAmountInput);
+
         if (!isNaN(expenseAmount) && expenseAmount > 0) {
             addExpenseToList(expenseName, expenseAmount);
         } else {
-            alert("Please enter a valid expense amount.");
+            alert(keys.invalidExpenseAmount); // Use the translated string for the alert
         }
     });
+
 
     // Initialize the display with the loaded or default data.
     updateBudgetDisplay();
