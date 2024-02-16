@@ -39,6 +39,7 @@ export function applyTranslations() {
     // Update text content for each element that needs translation
     document.getElementById('budgetManagerTitle').textContent = translationKeys.budgetManager;
     document.getElementById('updateBudget').textContent = translationKeys.updateBudget;
+    document.getElementById('addExpense').textContent = translationKeys.addExpense;
     // Continue for other elements
  
 }
