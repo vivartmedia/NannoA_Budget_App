@@ -1,9 +1,11 @@
 // Import the function to update the expense list from another module.
 import { updateExpenseList } from './expenseList.js';
 import { adjustTextSizeForBudget, formatNumber } from './adjustTxtSize.js';
+import { applyTranslations } from './translate.js';
 
 // Once the DOM is fully loaded, execute the following code.
 document.addEventListener('DOMContentLoaded', () => {
+    applyTranslations();
     // Initialize budget and expenses data, attempting to load from localStorage if available.
     let originalBudget = JSON.parse(localStorage.getItem('originalBudget')) || 0;
     let remainingBudget = JSON.parse(localStorage.getItem('remainingBudget')) || 0;
