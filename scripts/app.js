@@ -1,5 +1,6 @@
 // Import the function to update the expense list from another module.
 import { updateExpenseList } from './expenseList.js';
+import { adjustTextSizeForBudget, formatNumber } from './adjustTxtSize.js';
 
 // Once the DOM is fully loaded, execute the following code.
 document.addEventListener('DOMContentLoaded', () => {
@@ -19,8 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Update the display of budget and remaining budget on the webpage.
     const updateBudgetDisplay = () => {
-        document.getElementById('remainingBudget').textContent = remainingBudget.toFixed(2);
-        document.getElementById('originalBudget').textContent = originalBudget.toFixed(2);
+        document.getElementById('remainingBudget').textContent = formatNumber(remainingBudget.toFixed(2));
+        adjustTextSizeForBudget();
+        document.getElementById('originalBudget').textContent = formatNumber(originalBudget.toFixed(2));
     };
 
     // Add a new expense, update the budget and expenses list, then save the updated data.
