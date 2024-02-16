@@ -3,6 +3,7 @@ const translations = {
         budgetManager: "Budget Manager",
         updateBudget: "Update Budget",
         addExpense: "Add Expenses",
+        budgetTxtBottom: "Budget",
         enterTotalBudget: "Please enter your total budget:",
         invalidNumber: "Please enter a valid number.",
 
@@ -17,6 +18,7 @@ const translations = {
         budgetManager: "Gerente de Presupuesto",
         updateBudget: "actualizar presupuesto",
         addExpense: "Agregar gastos",
+        budgetTxtBottom: "Presupuesto",
         enterTotalBudget: "Por favor, introduzca su presupuesto total:",
         invalidNumber: "Por favor, introduzca un número válido.",
         enterExpenseName: "¿Para qué es el gasto?",
