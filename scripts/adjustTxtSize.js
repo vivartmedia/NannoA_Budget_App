@@ -15,7 +15,7 @@ export function adjustTextSizeForBudget() {
     } else if (budgetValue.length > 8) {
         budgetElement.classList.add('text-6xl');
     } else {
-        budgetElement.classList.add('text-xl'); // Default for smaller content lengths
+        budgetElement.classList.add('text-6xl'); // Default for smaller content lengths
     }
 
 }
